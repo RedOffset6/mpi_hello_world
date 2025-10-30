@@ -20,4 +20,4 @@ print(f"Rank {rank:02d}: handling range [{start}, {end}) -> partial sum = {local
 total_sum = comm.reduce(local_sum, op=MPI.SUM, root=0)
 
 if rank == 0:
-    print(f"\n✅ Total sum = {total_sum}")
+    print(f"\nTotal sum = {total_sum}")
